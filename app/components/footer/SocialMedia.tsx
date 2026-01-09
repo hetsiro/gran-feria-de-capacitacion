@@ -1,10 +1,12 @@
 export default function SocialMedia() {
+  const svgClass = "hover:scale-105 hover:brightness-110 hover:drop-shadow-md/25 transition-all duration-300 cursor-pointer";
   return (
     <div className="flex pt-5 lg:pt-4 justify-center gap-4 max-w-screen-sm mx-auto">
       <a
         href="http://www.facebook.com/SodimacConstructor"
         target="_blank"
         rel="noreferrer"
+        className={svgClass}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +32,7 @@ export default function SocialMedia() {
         href="https://www.instagram.com/sodimacconstructorcl/"
         target="_blank"
         rel="noreferrer"
+        className={svgClass}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +72,7 @@ export default function SocialMedia() {
         href="http://www.youtube.com/channel/UC3nisAt2c173wXsh_QZ0__A"
         target="_blank"
         rel="noreferrer"
+        className={svgClass}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,16 +103,16 @@ export default function SocialMedia() {
                 d="M861.94,1409.2a3.045,3.045,0,0,0-2.142-2.14c-1.9-.5-9.506-.5-9.506-.5s-7.6,0-9.505.5a3.043,3.043,0,0,0-2.142,2.14,34.362,34.362,0,0,0,0,11.681,3.043,3.043,0,0,0,2.142,2.14c1.9.5,9.505.5,9.505.5s7.6,0,9.506-.5a3.045,3.045,0,0,0,2.142-2.14,34.362,34.362,0,0,0,0-11.681Z"
                 fill="#fd0"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               ></path>
               <path
                 id="polygon6"
                 d="M854.175,1415.058l-6.324-3.66v7.3Z"
                 fill="#fd0"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               ></path>
             </g>
           </g>
