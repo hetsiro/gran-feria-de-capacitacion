@@ -1,26 +1,266 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #f6db00;
+  --secondary: #3876f6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Clip-path de cuadrado rotado */
+.clip-rhombus {
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 65%);
+}
+
+.clip-square {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-triangle {
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
+.clip-reverse-triangle {
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+}
+
+/* AnimaciÃ³n infinita de giro 360Â° con escala */
+@keyframes scale-infinite {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.2);
+    filter: brightness(2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes fade-infinite {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin-infinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scale-infinite {
+  animation: scale-infinite 2s ease-in-out infinite;
+}
+
+.spin-infinite {
+  animation: spin-infinite 1.5s linear infinite;
+}
+
+.fade-infinite {
+  animation: fade-infinite 2s ease-in-out infinite;
+}
+
+/* AnimaciÃ³n de giro 3D con brillo y escala */
+@keyframes spin3d-glow {
+  0% {
+    transform: rotateY(0deg) scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(0.8);
+    filter: brightness(2);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* Clase para aplicar la animaciÃ³n */
+.spin3d-glow {
+  animation: spin3d-glow 1.5s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+@keyframes downscale-glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: translatey(-25px) rotate(2deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Clase para aplicar la animaciÃ³n */
+.downscale-glow {
+  animation: downscale-glow 1s ease-in-out;
+}
+
+/* Animaciones de scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animaciones para el loading con slide */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+.slide-in {
+  animation: slideIn 1.5s 0.5s ease-in-out both;
+}
+
+.slide-out {
+  animation: slideOut 1s 1s ease-in-out forwards;
+}
+
+/* Clases para aplicar las animaciones */
+.scroll-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.scroll-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.scroll-fade-in-right {
+  animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.scroll-fade-in-down {
+  animation: fadeInDown 1.5s ease-in-out forwards;
+}
+
+.scroll-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Estado inicial (oculto) */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* AnimaciÃ³n para la apariciÃ³n de las imÃ¡genes de ganadores */
+@keyframes imagesAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.images-appear {
+  animation: imagesAppear 0.8s ease-out forwards;
+}
+
+/* Loading screen animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
