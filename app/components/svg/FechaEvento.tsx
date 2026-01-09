@@ -3,7 +3,7 @@ export default function FechaEvento() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 223.625 104.61"
-      className="w-30"
+      className="w-20 md:w-30"
     >
       <path
         id="Path_663"

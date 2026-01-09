@@ -3,7 +3,7 @@ export default function UbicacionEvento() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 244.466 120.012"
-      className="w-30"
+      className="w-20 md:w-30"
     >
       <path
         id="Path_662"

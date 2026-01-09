@@ -35,7 +35,7 @@ export default function CardLight({
   return (
     <div
       ref={cardRef}
-      className={`${myriadPro.className} relative flex flex-col items-center gap-4 p-8 text-justify rounded-2xl bg-linear-to-br from-gray-800 to-gray-600 text-white border-4 border-gray-100 hover:border-gray-300 hover:cursor-pointer hover:scale-105 hover:drop-shadow-md/25 transition-all duration-300 overflow-hidden`}
+      className={`${myriadPro.className} max-w-100 md:w-full relative flex flex-col items-center gap-4 p-8 text-justify rounded-2xl bg-linear-to-br from-gray-800 to-gray-600 text-white border-4 border-gray-100 hover:border-gray-300 hover:cursor-pointer hover:scale-105 hover:drop-shadow-md/25 transition-all duration-300 overflow-hidden`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

@@ -4,7 +4,7 @@ export default function FormularioInscripcion({ className }: { className?: strin
         <div className={`drop-shadow-lg/50 h-full flex flex-col items-center justify-center bg-white p-12 rounded-2xl ${className}`}>
             <h1 className="text-4xl font-bold">Formulario de Inscripción</h1>
             <form className="w-full max-w-md">
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Nombre</label>
                         <input className={inputClass} id="name" type="text" placeholder="Nombre" />
@@ -14,7 +14,7 @@ export default function FormularioInscripcion({ className }: { className?: strin
                         <input className={inputClass} id="lastname" type="text" placeholder="Apellido" />
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email</label>
                         <input className={inputClass} id="email" type="email" placeholder="Email" />
@@ -24,7 +24,7 @@ export default function FormularioInscripcion({ className }: { className?: strin
                         <input className={inputClass} id="phone" type="tel" placeholder="Teléfono" />
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="company">Empresa</label>
                         <input className={inputClass} id="company" type="text" placeholder="Empresa" />

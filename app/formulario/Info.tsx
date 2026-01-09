@@ -44,7 +44,7 @@ export default function Info() {
     },
   ];
   return (
-    <div className="grid grid-cols-3 gap-8 w-4xl -mt-60 z-10">
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-8 w-full md:max-w-4xl p-2 md:p-0 md:-mt-60 z-10">
       {info.map((info) => (
         <Card
           key={info.title}

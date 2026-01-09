@@ -17,9 +17,9 @@ export default function Novedades() {
         },
     ];
     return (
-        <section className="flex flex-col items-center justify-center gap-10 p-8 rounded-2xl bg-white w-full">
+        <section className="flex flex-col items-center justify-center gap-10 py-8 px-2 md:px-8 rounded-2xl bg-white">
             <h2 className={`text-3xl font-bold tracking-wide text-gray-800 ${AlfaSlabOne.className}`}>NOVEDADES</h2>
-            <div className="grid grid-cols-3 gap-4 w-full">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                 {novedades.map((novedad) => (
                     <CardLight key={novedad.title} title={novedad.title} description={novedad.description} />
                 ))}
