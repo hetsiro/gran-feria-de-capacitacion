@@ -10,8 +10,13 @@
   --color-secondary: var(--secondary);
 }
 
+html {
+  color-scheme: light;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color-scheme: light;
 }
 
 /* Clip-path de cuadrado rotado */

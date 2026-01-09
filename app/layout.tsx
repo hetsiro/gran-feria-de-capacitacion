@@ -6,6 +6,10 @@ import Footer from "./components/footer/Footer";
 export const metadata: Metadata = {
   title: "Gran Feria de Capacitación",
   description: "Gran Feria de Capacitación",
+  themeColor: "#f6db00",
+  other: {
+    "color-scheme": "light",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" style={{ colorScheme: 'light' }}>
       <body
         className={`flex flex-col min-h-screen antialiased`}
       >
