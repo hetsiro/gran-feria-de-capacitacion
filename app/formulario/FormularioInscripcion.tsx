@@ -1,8 +1,8 @@
 export default function FormularioInscripcion({ className }: { className?: string }) {
     const inputClass = "shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
     return (
-        <div className={`drop-shadow-lg/50 h-full flex flex-col items-center justify-center bg-white p-12 rounded-2xl ${className}`}>
-            <h1 className="text-4xl font-bold">Formulario de Inscripción</h1>
+        <div className={`flex flex-col items-center justify-center bg-white p-12 ${className}`}>
+            <h1 className="text-lg md:text-4xl font-bold mb-4">Formulario de Inscripción</h1>
             <form className="w-full max-w-md">
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                     <div className="mb-4">

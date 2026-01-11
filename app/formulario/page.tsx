@@ -48,7 +48,11 @@ export default function Page() {
               width={1936}
               height={999}
             />
-            <FormularioInscripcion />
+            <iframe
+              src="/iframe"
+              className="w-full h-236 drop-shadow-lg/50 rounded-2xl"
+              title="Formulario de Inscripción"
+            />
           </div>
         </section>
         <Info />
@@ -88,7 +92,11 @@ export default function Page() {
             width={1936}
             height={999}
           />
-          <FormularioInscripcion />
+          <iframe
+            src="/iframe"
+            className="w-full h-235 drop-shadow-lg/50 rounded-2xl"
+            title="Formulario de Inscripción"
+          />
         </section>
         <Info />
         <Novedades />
